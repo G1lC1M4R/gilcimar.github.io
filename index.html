@@ -1,210 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gear Digital | Tecnologia e Segurança</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gear Digital | Tecnologia e Segurança</title>
 
-    <style>
-        :root {
-            --verde-escuro: #1A3C34;
-            --preto: #0B0B0B;
-            --azul-tech: #00BFFF;
-            --cinza: #1E1E1E;
-        }
+  <meta name="description" content="Tecnologia, segurança digital e presença online para empresas que querem crescer com solidez." />
 
-        * {
-            box-sizing: border-box;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: var(--preto);
-            color: #ffffff;
-            line-height: 1.6;
-        }
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card: #141821;
+      --primary: #00bfff;
+      --secondary: #1a3c34;
+      --text: #eaeaea;
+      --muted: #9aa4b2;
+    }
 
-        header {
-            background-color: var(--verde-escuro);
-            border-bottom: 2px solid var(--azul-tech);
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-        .topo {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
+    header {
+      background: linear-gradient(135deg, #0b0d10, #111827);
+      border-bottom: 1px solid #1f2937;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 24px;
+    }
 
-        .logo img {
-            width: 70px;
-            height: auto;
-        }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        .logo h1 {
-            font-size: 24px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin: 0;
-        }
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
+    nav a {
+      color: var(--muted);
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        nav a:hover {
-            color: var(--azul-tech);
-        }
+    nav a:hover {
+      color: var(--primary);
+    }
 
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-                        url("bg-tech.jpg") center/cover no-repeat;
-            padding: 100px 20px;
-            text-align: center;
-        }
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+    }
 
-        .hero h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 18px;
-        }
+    .hero p {
+      max-width: 640px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+    }
 
-        .btn {
-            margin-top: 30px;
-            padding: 15px 40px;
-            background-color: var(--azul-tech);
-            color: #fff;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
+    .cta {
+      margin-top: 40px;
+    }
 
-        .btn:hover {
-            background-color: #0099cc;
-        }
+    .cta a {
+      background: var(--primary);
+      color: #000;
+      padding: 14px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
 
-        section {
-            padding: 60px 20px;
-        }
+    .cta a:hover {
+      opacity: 0.85;
+    }
 
-        .titulo {
-            text-align: center;
-            color: var(--azul-tech);
-            margin-bottom: 40px;
-        }
+    section {
+      padding: 80px 0;
+    }
 
-        .servicos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
+    section h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 30px;
+    }
 
-        .card {
-            background-color: var(--cinza);
-            padding: 30px;
-            border-radius: 6px;
-            transition: transform 0.3s;
-        }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
 
-        .card:hover {
-            transform: translateY(-6px);
-        }
+    .card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #1f2937;
+      transition: 0.3s;
+    }
 
-        .card h3 {
-            margin-top: 0;
-            color: var(--azul-tech);
-        }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary);
+    }
 
-        footer {
-            background-color: var(--verde-escuro);
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            margin-top: 60px;
-        }
-    </style>
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    footer {
+      background: #020617;
+      border-top: 1px solid #1f2937;
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-    <div class="container topo">
-        <div class="logo">
-            <img src="logo-gear.jpg" alt="Gear Digital">
-            <h1>Gear Digital</h1>
-        </div>
-
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contato</a>
-        </nav>
+  <header>
+    <div class="container top">
+      <div class="logo">Gear Digital</div>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
-</header>
 
-<main>
-
-<section class="hero" id="inicio">
-    <h2>Tecnologia, Segurança e Presença Digital</h2>
-    <p>
-        Posicionamos empresas no ambiente digital com soluções modernas,
-        seguras e alinhadas às boas práticas da internet.
-    </p>
-    <button class="btn">Falar com Especialista</button>
-</section>
-
-<section id="servicos">
-    <h2 class="titulo">Nossos Serviços</h2>
-
-    <div class="container servicos">
-        <div class="card">
-            <h3>Segurança Digital</h3>
-            <p>Proteção da presença online contra riscos e ameaças digitais.</p>
-        </div>
-
-        <div class="card">
-            <h3>Desenvolvimento de Sites</h3>
-            <p>Sites rápidos, responsivos e preparados para produção.</p>
-        </div>
-
-        <div class="card">
-            <h3>Gestão de Redes</h3>
-            <p>Posicionamento estratégico e comunicação profissional.</p>
-        </div>
-
-        <div class="card">
-            <h3>Marketing Digital</h3>
-            <p>Estratégias focadas em crescimento e autoridade digital.</p>
-        </div>
+    <div class="container hero">
+      <h1>Tecnologia e segurança para empresas que querem crescer</h1>
+      <p>
+        Posicionamos negócios no ambiente digital com foco em segurança,
+        performance e presença profissional.
+      </p>
+      <div class="cta">
+        <a href="#contato">Falar com especialista</a>
+      </div>
     </div>
-</section>
+  </header>
 
-</main>
+  <section id="servicos">
+    <div class="container">
+      <h2>Serviços</h2>
 
-<footer id="contato">
-    <p>© 2025 Gear Digital — Tecnologia e Segurança</p>
-</footer>
+      <div class="services">
+        <div class="card">
+          <h3>Segurança Digital</h3>
+          <p>Proteção de sites, dados e infraestrutura contra ameaças digitais.</p>
+        </div>
+
+        <div class="card">
+          <h3>Desenvolvimento Web</h3>
+          <p>Sites rápidos, responsivos e preparados para crescimento.</p>
+        </div>
+
+        <div class="card">
+          <h3>Redes Sociais</h3>
+          <p>Posicionamento estratégico e presença consistente nas plataformas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Marketing Digital</h3>
+          <p>Estratégia, tráfego e conversão focados em resultado real.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <h2>Contato</h2>
+      <p style="text-align:center; color: var(--muted);">
+        Em breve um canal direto.  
+        Por enquanto, este site funciona como laboratório e vitrine.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Gear Digital · Tecnologia com responsabilidade
+  </footer>
 
 </body>
 </html>
