@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gear Digital | Tecnologia e Segurança</title>
+
+    <style>
+        :root {
+            --verde-escuro: #1A3C34;
+            --preto: #0B0B0B;
+            --azul-tech: #00BFFF;
+            --cinza: #1E1E1E;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--preto);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--verde-escuro);
+            border-bottom: 2px solid var(--azul-tech);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .topo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 70px;
+            height: auto;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--azul-tech);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                        url("bg-tech.jpg") center/cover no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: var(--azul-tech);
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0099cc;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .titulo {
+            text-align: center;
+            color: var(--azul-tech);
+            margin-bottom: 40px;
+        }
+
+        .servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--cinza);
+            padding: 30px;
+            border-radius: 6px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--azul-tech);
+        }
+
+        footer {
+            background-color: var(--verde-escuro);
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container topo">
+        <div class="logo">
+            <img src="logo-gear.jpg" alt="Gear Digital">
+            <h1>Gear Digital</h1>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+    <h2>Tecnologia, Segurança e Presença Digital</h2>
+    <p>
+        Posicionamos empresas no ambiente digital com soluções modernas,
+        seguras e alinhadas às boas práticas da internet.
+    </p>
+    <button class="btn">Falar com Especialista</button>
+</section>
+
+<section id="servicos">
+    <h2 class="titulo">Nossos Serviços</h2>
+
+    <div class="container servicos">
+        <div class="card">
+            <h3>Segurança Digital</h3>
+            <p>Proteção da presença online contra riscos e ameaças digitais.</p>
+        </div>
+
+        <div class="card">
+            <h3>Desenvolvimento de Sites</h3>
+            <p>Sites rápidos, responsivos e preparados para produção.</p>
+        </div>
+
+        <div class="card">
+            <h3>Gestão de Redes</h3>
+            <p>Posicionamento estratégico e comunicação profissional.</p>
+        </div>
+
+        <div class="card">
+            <h3>Marketing Digital</h3>
+            <p>Estratégias focadas em crescimento e autoridade digital.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer id="contato">
+    <p>© 2025 Gear Digital — Tecnologia e Segurança</p>
+</footer>
+
+</body>
+</html>
